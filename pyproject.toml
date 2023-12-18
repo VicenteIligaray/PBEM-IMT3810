@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "pypbem"
+version = "0.2.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.isort]
+profile = "black"
+lines_after_imports = 2
+
+[tool.black]
+line-length = 100
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+bempp-cl = "^0.3.1"
+numpy = "^1.26.2"
+scipy = "^1.11.4"
+numba = "^0.58.1"
+jupyter = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.0"
+isort = "^5.13.2"
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

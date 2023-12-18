@@ -1,0 +1,60 @@
+name: Linterns
+
+on:
+  push:
+    branches:
+      - dev
+      - stg
+      - prd
+  pull_request:
+    branches:
+      - dev
+      - stg
+      - prd
+      - feat/*
+      - bugfix/*
+      - refactor/*
+
+jobs:
+  linters:
+    name: Black, Flake8, Isort
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout git repository
+        uses: actions/checkout@v2
+
+      - name: set up python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+
+      - name: install linter dependencies
+        run: pip install black "black[jupyter]" flake8 flake8-isort isort
+
+      - name: black, flake8, isort
+        uses: wearerequired/lint-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          black: true
+          flake8: true
+
+  # TODO: uncomment this when having some more code
+  # mypy:
+  #   name: Mypy
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - name: check out git repository
+  #       uses: actions/checkout@v2
+
+  #     - name: set up python
+  #       uses: actions/setup-python@v1
+  #       with:
+  #         python-version: 3.9
+
+  #     - name: install linter dependencies
+  #       run: pip install mypy pandas-stubs
+
+  #     - name: Mypy
+  #       run: mypy .
