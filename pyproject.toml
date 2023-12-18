@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "pypbem"
-version = "0.2.0"
+version = "1.0.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Vicente Iligaray <vicente.iligaray@uc.cl>", "Danilo Aballay <danilo.aballay@uc.cl>"]
 readme = "README.md"
 
 [tool.isort]
@@ -20,6 +20,8 @@ numpy = "^1.26.2"
 scipy = "^1.11.4"
 numba = "^0.58.1"
 jupyter = "^1.0.0"
+meshio = "^5.3.4"
+gmsh = "^4.11.1"
 
 
 [tool.poetry.group.dev.dependencies]

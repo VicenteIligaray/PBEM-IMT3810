@@ -1,0 +1,34 @@
+{
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "better-comments.multilineComments": true,
+  "black-formatter.importStrategy": "fromEnvironment",
+  "editor.rulers": [
+    100
+  ],
+  "autoDocstring.docstringFormat": "numpy",
+  "editor.tabSize": 4,
+  "editor.wordWrap": "off",
+  "flake8.importStrategy": "fromEnvironment",
+  "isort.args": [
+    "--profile",
+    "black"
+  ],
+  "isort.importStrategy": "fromEnvironment",
+  "notebook.formatOnSave.enabled": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.formatting.provider": "none",
+  "python.linting.mypyEnabled": false
+}
